@@ -60,4 +60,13 @@ public class StackTugasMahasiswa20 {
         }
         System.out.println(" ");
     }
+
+    public Mahasiswa20 peekBottom() {
+        if (!isEmpty()) {
+            return stack[0]; // indeks 0 = yang pertama masuk
+        } else {
+            System.out.println("Stack kosong! Tidak ada tugas yang dikumpulkan.");
+            return null;
+        }
+    }
 }
