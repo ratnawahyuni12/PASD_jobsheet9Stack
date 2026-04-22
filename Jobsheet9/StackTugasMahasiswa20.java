@@ -69,4 +69,8 @@ public class StackTugasMahasiswa20 {
             return null;
         }
     }
+
+    public int countTugas() {
+        return top + 1; // top=-1 artinya kosong, top=0 artinya ada 1 data, dst
+    }
 }
