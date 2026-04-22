@@ -10,19 +10,11 @@ public class StackTugasMahasiswa20 {
     }
 
     public boolean isFull() {
-        if (top == size - 1) {
-            return true;
-        } else {
-            return false;
-        }
+        return top == size - 1;
     }
 
     public boolean isEmpty() {
-        if (top == -1) {
-            return true;
-        } else {
-            return false;
-        }
+        return top == -1;
     }
 
     public void push(Mahasiswa20 mhs) {
@@ -72,5 +64,19 @@ public class StackTugasMahasiswa20 {
 
     public int countTugas() {
         return top + 1; // top=-1 artinya kosong, top=0 artinya ada 1 data, dst
+    }
+
+    public String konversiDesimalKeBiner(int nilai) {
+        StackKonversi20 stack = new StackKonversi20();
+        while (nilai > 0) {
+            int sisa = nilai % 2;
+            stack.push(sisa);
+            nilai = nilai / 2;
+        }
+        String biner = new String();
+            while (!stack.isEmpty()) {
+                biner += stack.pop();
+            }
+            return biner;
     }
 }
